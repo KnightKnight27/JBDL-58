@@ -20,43 +20,43 @@ public class Main {
                e.printStackTrace();
            }
        });
-//       t1.setDaemon(true);
+       t1.setDaemon(true);
        t1.start();
        System.out.println("MY MAIN THREAD IS OVER");
         // PARALLEL STREAMS
 
-//        List<Integer> arr = Arrays.asList(2,7,9,10,12,18);
-//        arr.parallelStream().filter(x->x%2==0).forEach(x->{
-//            System.out.print(x);
-//            System.out.println(Thread.currentThread());
-//        });
+        List<Integer> arr = Arrays.asList(2,7,9,10,12,18);
+        arr.parallelStream().filter(x->x%2==0).forEach(x->{
+            System.out.print(x);
+            System.out.println(Thread.currentThread());
+        });
         /**
          * Lec 5 Learning more about threads, synchronization,critical section,parallel streams.
+         HOW TO ADD NUMBERS FROM 1 TILL 1000 using multiple threads
+         shutdown your executor service means it wont take any more runnables
          */
-        /**
-         * HOW TO ADD NUMBERS FROM 1 TILL 1000 using multiple threads
-         * shutdown your executor service means it wont take any more runnables
-         * ExecutorService executorService = Executors.newFixedThreadPool(10);
-         *         for(int i=1;i<=100;i++){
-         *             executorService.submit(new Adder(i));
-         *         }
-         *         executorService.shutdown();
-         *         System.out.print(Adder.final_ans);
-         *         List<Thread> listOfThreads = new ArrayList<>();
-         *         for(int i=1;i<=100000;i++){
-         *             Thread t = new Thread(new Adder(i));
-         *             t.start();
-         *             listOfThreads.add(t);
-         *         }
-         *         listOfThreads.stream().forEach(t-> {
-         *             try {
-         *                 t.join();
-         *             } catch (InterruptedException e) {
-         *                 e.printStackTrace();
-         *             }
-         *         });
-         *         System.out.print(Adder.final_ans);
-         */
+
+          ExecutorService executorService = Executors.newFixedThreadPool(10);
+                  for(int i=1;i<=100;i++){
+                      executorService.submit(new Adder(i));
+                  }
+                  executorService.shutdown();
+                  System.out.print(Adder.final_ans);
+                  List<Thread> listOfThreads = new ArrayList<>();
+                  for(int i=1;i<=100000;i++){
+                      Thread t = new Thread(new Adder(i));
+                      t.start();
+                      listOfThreads.add(t);
+                  }
+                  listOfThreads.stream().forEach(t-> {
+                      try {
+                          t.join();
+                      } catch (InterruptedException e) {
+                          e.printStackTrace();
+                      }
+                  });
+                  System.out.print(Adder.final_ans);
+
 
 
     }

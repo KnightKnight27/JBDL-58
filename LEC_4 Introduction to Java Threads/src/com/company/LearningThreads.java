@@ -58,7 +58,6 @@ public class LearningThreads {
          *  MACHINE LEARNING MODELS CPU HEAVY OPERATIONS SINGLE THREADED BETTER
          *  DOWNLOAD FROM NETWORK, USER HAS TO INTERACT WITH APPLICATION -> MULTITHREADING IS BETTER
          */
-        /*
         List<Thread> allThreads = new ArrayList<>();
         for(int i=1;i<20;i++) {
             NumberPrinter numberPrinter1 = new NumberPrinter(i);
@@ -83,6 +82,5 @@ public class LearningThreads {
 
         }
         System.out.println("Hellooooo HELLO");
-         */
     }
 }

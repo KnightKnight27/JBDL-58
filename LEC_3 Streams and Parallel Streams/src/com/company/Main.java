@@ -13,17 +13,17 @@ public class Main {
         // SUPPLIER
         // Get some random int
         // CONSUMER
-//        Supplier<Integer> supplier = ()-> new Random().nextInt();
-//        System.out.println(supplier.get());
+        Supplier<Integer> supplier = ()-> new Random().nextInt();
+        System.out.println(supplier.get());
 //        // Predicate
-//        Predicate<String> predicate = (a)-> a.length()>5;
-//        System.out.println(predicate.test("DEATH NOTE"));
+        Predicate<String> predicate = (a)-> a.length()>5;
+        System.out.println(predicate.test("DEATH NOTE"));
 //        // Function
-//        Function<Integer,Integer> function = (a) -> a*2;
-//        System.out.println(function.apply(3));
+        Function<Integer,Integer> function = (a) -> a*2;
+        System.out.println(function.apply(3));
 //        // bI FUNCTION
-//        BiFunction<Integer,Integer,Double> biFunction = (a,b)->(new Double((a*b)/100.0));
-//        System.out.println(biFunction.apply(20,3));
+        BiFunction<Integer,Integer,Double> biFunction = (a,b)->(new Double((a*b)/100.0));
+        System.out.println(biFunction.apply(20,3));
         /** GIVEN A LIST OF INTEGERS
          *  1. FIND OUT OF THE EVEN NUMBERS OF IT
          *  2. DO SQUARE OF THEM
@@ -41,18 +41,18 @@ public class Main {
 
 
         // HOW TO IMPLEMENT HERE USING FOR LOOPS
-//        for(int i=0;i<N;i++){
-//            if(arr[i]%2){
-//                even.add(arr[i]);
-//            }
-//        }
-//        for(i = 0;i<N;i++){
-//            sq.add(even[i]*even[i]);
-//        }
-//        int sum= 0;
-//        for(int it:sq){
-//            sum += it;
-//        }
+        for(int i=0;i<N;i++){
+            if(arr[i]%2){
+                even.add(arr[i]);
+            }
+        }
+        for(i = 0;i<N;i++){
+            sq.add(even[i]*even[i]);
+        }
+        int sum= 0;
+        for(int it:sq){
+            sum += it;
+        }
 
 
     }
