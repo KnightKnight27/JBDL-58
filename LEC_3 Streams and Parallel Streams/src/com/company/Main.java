@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
+
         // SUPPLIER
         // Get some random int
         // CONSUMER
